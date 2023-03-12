@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container:hover .accordion-label {
+  color: black;
+}
+
+.container:hover .accordion-label::after {
+  display: block;
+}
+
+.main-header {
+  font-size: 3rem;
+}
+label {
+  font-size: 1.5rem;
+}
+.botton-border {
+  border-bottom: 0.1rem solid rgb(171, 171, 171);
+  padding: 0.5rem 0;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  width: auto;
+  height: auto;
+}
+.accordion-label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: blue;
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 1rem;
+  height: 1rem;
+  display: none;
+  text-align: center;
+  transition: all 0.3s;
+}
+input:checked + .accordion-label::after {
+  transform: rotate(90deg);
+}
+.img {
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
+}
+.accordion-content {
+  display: flex;
+  justify-content: center;
+  max-height: 0;
+  transition: all 0.3s;
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+}
+input:checked ~ .accordion-label {
+  color: black;
+}
+.accordion-panel:hover .accordion-content {
+  max-height: 100vh;
+}
