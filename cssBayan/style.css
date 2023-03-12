@@ -51,6 +51,7 @@ input:checked + label .icon {
   width: 100%;
   height: auto;
   max-width: 30rem;
+  padding: 2rem;
 }
 .accordion-content {
   display: flex;
