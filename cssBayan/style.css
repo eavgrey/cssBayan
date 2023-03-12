@@ -12,14 +12,6 @@
   width: 90%;
   margin: 0 auto;
 }
-.container:hover .accordion-label {
-  color: black;
-}
-
-.container:hover .icon {
-  display: block;
-  transition: all ease-in 0.7s;
-}
 
 .main-header {
   font-size: 3rem;
@@ -66,9 +58,7 @@ input:checked ~ .accordion-content {
 input:checked ~ .accordion-label {
   color: black;
 }
-.accordion-panel:hover .accordion-content {
-  max-height: 100vh;
-}
+
 .accordion-panel {
   cursor: pointer;
 }
@@ -78,4 +68,16 @@ input:checked ~ .accordion-label {
 .accordion-panel:active .img {
   opacity: 0.8;
   cursor: progress;
+}
+@media (hover: hover) {
+  .accordion-panel:hover .accordion-content {
+    max-height: 100vh;
+  }
+  .container:hover .icon {
+    display: block;
+    transition: all ease-in 0.7s;
+  }
+  .container:hover .accordion-label {
+    color: black;
+  }
 }
